@@ -8,10 +8,6 @@
 |------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
 | **Title**              | The name of the video.                                                           | `title`                    | `The Great Adventure`     | **Mandatory**           |
 | **Genre**              | The genre of the video content.                                                   | `genre`                    | `Comedy`                  | **Mandatory** (Video)   |
-| **Duration**           | The total length of the video in seconds.                                        | `duration`                 | `3600` (1 hour)           | **Mandatory**           |
-| **File Format**        | The container type of the media file (e.g., MP4).                                | `format`                   | `MP4`                     | **Mandatory**           |
-| **Video Codec**        | The codec used for encoding video (e.g., H.264 or HEVC).                         | `video_codec`              | `H.264`                   | **Mandatory** (Video)   |
-| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | **Mandatory** (Video)   |
 | **Artwork/Poster**     | The image representing the video (e.g., video thumbnail).                        | `artwork`                  | `cover.jpg`               | **Optional**            |
 | **Subtitle/Caption Tracks** | Text tracks for subtitles or closed captions.                                   | `subtitle`                 | `english.srt`             | **Optional**            |
 | **Release Date**       | The date the video was released.                                                | `release_date`             | `2023-05-15`              | **Optional**            |
@@ -29,9 +25,6 @@
 | **Artist**             | The performer or band for audio.                                                 | `artist`                   | `John Doe`                | **Mandatory** (Audio)   |
 | **Album**              | The album name for audio.                                                        | `album`                    | `Summer Hits`             | **Mandatory** (Audio)   |
 | **Genre**              | The genre of the audio content.                                                   | `genre`                    | `Comedy`                  | **Mandatory** (Audio)   |
-| **Duration**           | The total length of the audio in seconds.                                        | `duration`                 | `3600` (1 hour)           | **Mandatory**           |
-| **File Format**        | The container type of the media file (e.g., MP4, MP3, AAC).                     | `format`                   | `MP3`                     | **Mandatory** (Audio)   |
-| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | **Mandatory** (Audio)   |
 | **Artwork/Poster**     | The image representing the audio (e.g., album art).                             | `artwork`                  | `cover.jpg`               | **Mandatory** (Audio)   |
 | **Track Number**       | The track number in an album (for audio).                                        | `track_number`             | `5`                       | **Optional** (Audio)    |
 | **Album Artist**       | The artist or group for an album (for compilations).                             | `album_artist`             | `Various Artists`         | **Optional** (Audio)    |
