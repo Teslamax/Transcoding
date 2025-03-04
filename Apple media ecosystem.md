@@ -4,98 +4,10 @@
 
 ### Apple TV Metadata Table (Video)
 
-| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** |
-|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
-| **Title**              | The name of the video.                                                           | `title`                    | `The Great Adventure`     | **Mandatory**           |
-| **Genre**              | The genre of the video content.                                                   | `genre`                    | `Comedy`                  | **Mandatory** (Video)   |
-| **Artwork/Poster**     | The image representing the video (e.g., video thumbnail).                        | `artwork`                  | `cover.jpg`               | **Optional**            |
-| **Subtitle/Caption Tracks** | Text tracks for subtitles or closed captions.                                   | `subtitle`                 | `english.srt`             | **Optional**            |
-| **Release Date**       | The date the video was released.                                                | `release_date`             | `2023-05-15`              | **Optional**            |
-| **Season and Episode Numbers** | Used for TV shows to categorize by season and episode.                       | `season_number`, `episode_number` | `Season 1`, `Episode 5` | **Optional**            |
-| **Resolution**         | The resolution of the video (e.g., 1080p, 4K).                                   | `resolution`               | `1080p`                   | **Optional**            |
-| **Aspect Ratio**       | The aspect ratio of the video (e.g., 16:9, 4:3).                                 | `aspect_ratio`             | `16:9`                    | **Optional**            |
-| **Bitrate**            | The video bitrate used for encoding.                                            | `bitrate`                  | `2500k` (video)           | **Optional**            |
-| **Video Mode**         | The mode used for video (e.g., HDR, Standard).                                  | `video_mode`               | `HDR`                     | **Optional**            |
-
-### Apple Music Metadata Table (Audio)
-
-| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** |
-|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
-| **Title**              | The name of the audio track.                                                     | `title`                    | `The Great Adventure`     | **Mandatory**           |
-| **Artist**             | The performer or band for audio.                                                 | `artist`                   | `John Doe`                | **Mandatory** (Audio)   |
-| **Album**              | The album name for audio.                                                        | `album`                    | `Summer Hits`             | **Mandatory** (Audio)   |
-| **Genre**              | The genre of the audio content.                                                   | `genre`                    | `Comedy`                  | **Mandatory** (Audio)   |
-| **Artwork/Poster**     | The image representing the audio (e.g., album art).                             | `artwork`                  | `cover.jpg`               | **Mandatory** (Audio)   |
-| **Track Number**       | The track number in an album (for audio).                                        | `track_number`             | `5`                       | **Optional** (Audio)    |
-| **Album Artist**       | The artist or group for an album (for compilations).                             | `album_artist`             | `Various Artists`         | **Optional** (Audio)    |
-| **Composer**           | The composer of the music (for classical works).                                 | `composer`                 | `Beethoven`               | **Optional** (Audio)    |
-| **Year**               | The year the album or track was released.                                        | `year`                     | `2023`                    | **Optional** (Audio)    |
-| **Language**           | The language the audio content is in.                                            | `language`                 | `English`                 | **Optional** (Audio)    |
-| **Rating**             | User-assigned rating for the media (1–5 stars).                                  | `rating`                   | `5`                       | **Optional** (Audio)    |
-| **Copyright**          | Copyright information for the content.                                           | `copyright`                | `© 2023 John Doe Music`   | **Optional** (Audio)    |
-| **Grouping**           | Used to group tracks (e.g., remixes, collections).                              | `grouping`                 | `Remixes`                 | **Optional** (Audio)    |
-| **Sampling Rate**      | The audio sampling rate (e.g., 44.1 kHz, 48 kHz).                               | `sampling_rate`            | `44.1kHz`                 | **Optional** (Audio)    |
-| **Bit Depth**          | The bit depth for audio (e.g., 16-bit, 24-bit).                                  | `bit_depth`                | `16-bit`                  | **Optional** (Audio)    |
-
-### Automatically Determined Metadata (Read-Only)
-
-| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** |
-|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
-| **Video Codec**        | The codec used for encoding the video (e.g., H.264, HEVC).                       | `video_codec`              | `H.264`                   | **Automatically Determined** |
-| **Audio Codec**        | The codec used for encoding the audio (e.g., AAC, MP3, ALAC).                    | `audio_codec`              | `AAC`                     | **Automatically Determined** |
-| **File Format**        | The container type of the media file (e.g., MP4, MP3, AAC).                     | `format`                   | `MP4`                     | **Automatically Determined** |
-| **Duration**           | The total length of the video/audio in seconds.                                   | `duration`                 | `3600` (1 hour)           | **Automatically Determined** |
-
----
-
-### Common Encoders and Profiles Supported by Your Devices
-
-| **Device**               | **Video Encoders**         | **Supported Profiles**                           | **Audio Encoders** | **Supported Audio Profiles** |
-|--------------------------|----------------------------|--------------------------------------------------|--------------------|------------------------------|
-| **MacBook Pro 2018 (13")** | H.264, HEVC (H.265), VP9    | H.264 High, HEVC Main, HEVC Main 10             | AAC, MP3, ALAC     | AAC Low Complexity (LC), MP3 |
-| **iPhone 15 Pro Max**     | H.264, HEVC (H.265), VP9    | H.264 High, HEVC Main, HEVC Main 10             | AAC, MP3, ALAC     | AAC Low Complexity (LC), MP3 |
-| **iPad Air 5th Gen (M1)** | H.264, HEVC (H.265), VP9    | H.264 High, HEVC Main, HEVC Main 10             | AAC, MP3, ALAC     | AAC Low Complexity (LC), MP3 |
-| **Amazon Fire Cube (2nd Gen)** | H.264, HEVC (H.265), VP9    | H.264 Main, HEVC Main                          | AAC, MP3, Dolby Digital (AC-3) | AAC, MP3, Dolby Digital (AC-3) |
-
-### Common Containers and Codec Formats
-
-| **Container**  | **Commonly Used Codecs**                             | **Device Compatibility**    |
-|----------------|------------------------------------------------------|-----------------------------|
-| **MP4**        | H.264, HEVC (H.265), AAC, MP3, ALAC                  | Apple TV, iPhone, iPad, Fire Cube |
-| **MOV**        | H.264, HEVC (H.265), AAC, MP3, ALAC                  | Apple TV, iPhone, iPad      |
-| **MKV**        | VP9, H.264, HEVC, AAC, MP3                           | Apple TV (via third-party apps), Fire Cube (via third-party apps) |
-| **AVI**        | H.264, MP3                                           | Limited to third-party apps on all devices |
-| **WebM**       | VP9, Opus                                            | Fire Cube (via third-party apps) |
-
----
-
-### Conclusion
-
-This quick-reference sheet provides an overview of the **metadata** fields required for **Apple TV** and **Apple Music** (formerly iTunes) app compatibility, along with the **supported encoders** and **profiles** for each of your devices. You can refer to this sheet for easy encoding and transcoding decisions, ensuring the best compatibility and performance for your videos and audio content.
-
----
-
-Once you're satisfied with the **Markdown version**, let me know, and I'll generate the **PDF version** for you!
-
-
-
-
-
-
-# Quick Reference Sheet for Video and Audio Metadata and Device Compatibility
-
-## Video and Audio Metadata for Apple TV and Music App
-
-### Apple TV Metadata Table (Video)
-
 | **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Required** |
 |------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|--------------|
 | **Title**              | The name of the video.                                                           | `title`                    | `The Great Adventure`     | ✔            |
 | **Genre**              | The genre of the video content.                                                   | `genre`                    | `Comedy`                  | ✔            |
-| **Duration**           | The total length of the video in seconds.                                        | `duration`                 | `3600` (1 hour)           | ✔            |
-| **File Format**        | The container type of the media file (e.g., MP4).                                | `format`                   | `MP4`                     | ✔            |
-| **Video Codec**        | The codec used for encoding video (e.g., H.264 or HEVC).                         | `video_codec`              | `H.264`                   | ✔            |
-| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | ✔            |
 | **Artwork/Poster**     | The image representing the video (e.g., video thumbnail).                        | `artwork`                  | `cover.jpg`               |              |
 | **Subtitle/Caption Tracks** | Text tracks for subtitles or closed captions.                                   | `subtitle`                 | `english.srt`             |              |
 | **Release Date**       | The date the video was released.                                                | `release_date`             | `2023-05-15`              |              |
@@ -113,9 +25,6 @@ Once you're satisfied with the **Markdown version**, let me know, and I'll gener
 | **Artist**             | The performer or band for audio.                                                 | `artist`                   | `John Doe`                | ✔            |
 | **Album**              | The album name for audio.                                                        | `album`                    | `Summer Hits`             | ✔            |
 | **Genre**              | The genre of the audio content.                                                   | `genre`                    | `Comedy`                  | ✔            |
-| **Duration**           | The total length of the audio in seconds.                                        | `duration`                 | `3600` (1 hour)           | ✔            |
-| **File Format**        | The container type of the media file (e.g., MP4, MP3, AAC).                     | `format`                   | `MP3`                     | ✔            |
-| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | ✔            |
 | **Artwork/Poster**     | The image representing the audio (e.g., album art).                             | `artwork`                  | `cover.jpg`               | ✔            |
 | **Track Number**       | The track number in an album (for audio).                                        | `track_number`             | `5`                       |              |
 | **Album Artist**       | The artist or group for an album (for compilations).                             | `album_artist`             | `Various Artists`         |              |
@@ -164,7 +73,6 @@ Once you're satisfied with the **Markdown version**, let me know, and I'll gener
 
 This quick-reference sheet provides an overview of the **metadata** fields required for **Apple TV** and **Apple Music** (formerly iTunes) app compatibility, along with the **supported encoders** and **profiles** for each of your devices. You can refer to this sheet for easy encoding and transcoding decisions, ensuring the best compatibility and performance for your videos and audio content.
 
----
 
 Once you're satisfied with the **Markdown version**, let me know, and I'll generate the **PDF version** for you!
 
