@@ -7,7 +7,7 @@
 | **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Required** |
 |------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|--------------|
 | **Title**              | The name of the video.                                                           | `title`                    | `The Great Adventure`     | ✔            |
-| **Genre**              | The genre of the video content.                                                   | `genre`                    | `Comedy`                  | ✔            |
+| **Genre**              | The genre of the video content.                                                   | `genre`                    | `Comedy`                  |             |
 | **Artwork/Poster**     | The image representing the video (e.g., video thumbnail).                        | `artwork`                  | `cover.jpg`               |              |
 | **Subtitle/Caption Tracks** | Text tracks for subtitles or closed captions.                                   | `subtitle`                 | `english.srt`             |              |
 | **Release Date**       | The date the video was released.                                                | `release_date`             | `2023-05-15`              |              |
@@ -25,7 +25,7 @@
 | **Artist**             | The performer or band for audio.                                                 | `artist`                   | `John Doe`                | ✔            |
 | **Album**              | The album name for audio.                                                        | `album`                    | `Summer Hits`             | ✔            |
 | **Genre**              | The genre of the audio content.                                                   | `genre`                    | `Comedy`                  | ✔            |
-| **Artwork/Poster**     | The image representing the audio (e.g., album art).                             | `artwork`                  | `cover.jpg`               | ✔            |
+| **Artwork/Poster**     | The image representing the audio (e.g., album art).                             | `artwork`                  | `cover.jpg`               |   ✔          |
 | **Track Number**       | The track number in an album (for audio).                                        | `track_number`             | `5`                       |              |
 | **Album Artist**       | The artist or group for an album (for compilations).                             | `album_artist`             | `Various Artists`         |              |
 | **Composer**           | The composer of the music (for classical works).                                 | `composer`                 | `Beethoven`               |              |
