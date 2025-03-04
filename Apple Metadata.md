@@ -1,6 +1,6 @@
-# Quick Reference Sheet for Video and Audio Metadata and Device Compatibility
+# Quick Reference Sheet for Media Metadata and Device Compatibility
 
-## Video and Audio Metadata for Apple TV and Music App
+## Video and Audio Metadata for *Apple TV* and *Music App*
 
 ### Apple TV Metadata Table (Video)
 
