@@ -32,6 +32,10 @@
 | **Grouping**           | Used to group tracks (e.g., remixes, collections).                              | `grouping`                 | `Remixes`                 | **Optional** (Audio)    | No                                   |
 | **Sampling Rate**      | The audio sampling rate (e.g., 44.1 kHz, 48 kHz).                               | `sampling_rate`            | `44.1kHz`                 | **Optional** (Audio)    | No                                   |
 | **Bit Depth**          | The bit depth for audio (e.g., 16-bit, 24-bit).                                  | `bit_depth`                | `16-bit`                  | **Optional** (Audio)    | No                                   |
+| **Video Codec**        | The codec used for encoding the video (e.g., H.264, HEVC).                       | `video_codec`              | `H.264`                   | **Automatically Determined** | Yes                                  |
+| **Audio Codec**        | The codec used for encoding the audio (e.g., AAC, MP3, ALAC).                    | `audio_codec`              | `AAC`                     | **Automatically Determined** | Yes                                  |
+| **File Format**        | The container type of the media file (e.g., MP4).                                | `format`                   | `MP4`                     | **Automatically Determined** | Yes                                  |
+| **Duration**           | The total length of the video/audio in seconds.                                   | `duration`                 | `3600` (1 hour)           | **Automatically Determined** | Yes                                  |
 
 ### Common Encoders and Profiles Supported by Your Devices
 
@@ -60,4 +64,4 @@ This quick-reference sheet provides an overview of the **metadata** fields requi
 
 ---
 
-Once you are satisfied with the content in the **Markdown format**, let me know, and I will generate a **PDF version** for you.
+Once you're satisfied with the **Markdown version**, let me know, and I'll generate the **PDF version** for you!
