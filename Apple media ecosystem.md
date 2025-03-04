@@ -2,40 +2,58 @@
 
 ## Video and Audio Metadata for Apple TV and Music App
 
-### Video Metadata Table (Apple TV App)
+### Apple TV Metadata Table (Video)
 
-| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** | **Automatically Determined**        |
-|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|--------------------------------------|
-| **Title**              | The name of the video or audio track.                                             | `title`                    | `The Great Adventure`     | **Mandatory**           | No                                   |
-| **Artist**             | The performer or band for audio.                                                 | `artist`                   | `John Doe`                | **Mandatory** (Audio)   | No                                   |
-| **Album**              | The album name for audio.                                                        | `album`                    | `Summer Hits`             | **Mandatory** (Audio)   | No                                   |
-| **Genre**              | The genre of the content.                                                         | `genre`                    | `Comedy`                  | **Mandatory** (Audio/Video) | No                                   |
-| **Duration**           | The total length of the video/audio in seconds.                                    | `duration`                 | `3600` (1 hour)           | **Mandatory**           | Yes                                  |
-| **File Format**        | The container type of the media file (e.g., MP4).                                | `format`                   | `MP4`                     | **Mandatory**           | Yes                                  |
-| **Video Codec**        | The codec used for encoding video (e.g., H.264 or HEVC).                         | `video_codec`              | `H.264`                   | **Mandatory** (Video)   | Yes                                  |
-| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | **Mandatory** (Audio/Video) | Yes                                  |
-| **Artwork/Poster**     | The image representing the content (e.g., album art or video thumbnail).         | `artwork`                  | `cover.jpg`               | **Optional**            | No                                   |
-| **Subtitle/Caption Tracks** | Text tracks for subtitles or closed captions.                                   | `subtitle`                 | `english.srt`             | **Optional**            | No                                   |
-| **Release Date**       | The date the video or music was released.                                        | `release_date`             | `2023-05-15`              | **Optional**            | No                                   |
-| **Season and Episode Numbers** | Used for TV shows to categorize by season and episode.                       | `season_number`, `episode_number` | `Season 1`, `Episode 5` | **Optional**            | No                                   |
-| **Resolution**         | The resolution of the video (e.g., 1080p, 4K).                                   | `resolution`               | `1080p`                   | **Optional**            | No                                   |
-| **Aspect Ratio**       | The aspect ratio of the video (e.g., 16:9, 4:3).                                 | `aspect_ratio`             | `16:9`                    | **Optional**            | No                                   |
-| **Bitrate**            | The video or audio bitrate used for encoding.                                    | `bitrate`                  | `2500k` (video), `256k` (audio) | **Optional**            | No                                   |
-| **Video Mode**         | The mode used for video (e.g., HDR, Standard).                                  | `video_mode`               | `HDR`                     | **Optional**            | No                                   |
-| **Track Number**       | The track number in an album (for audio).                                        | `track_number`             | `5`                       | **Optional** (Audio)    | No                                   |
-| **Album Artist**       | The artist or group for an album (for compilations).                             | `album_artist`             | `Various Artists`         | **Optional** (Audio)    | No                                   |
-| **Composer**           | The composer of the music (for classical works).                                 | `composer`                 | `Beethoven`               | **Optional** (Audio)    | No                                   |
-| **Year**               | The year the album or movie was released.                                        | `year`                     | `2023`                    | **Optional** (Audio/Video) | No                                   |
-| **Language**           | The language the content is in.                                                  | `language`                 | `English`                 | **Optional**            | No                                   |
-| **Rating**             | User-assigned rating for the media (1–5 stars).                                  | `rating`                   | `5`                       | **Optional**            | No                                   |
-| **Copyright**          | Copyright information for the content.                                           | `copyright`                | `© 2023 John Doe Music`   | **Optional**            | No                                   |
-| **Grouping**           | Used to group tracks (e.g., remixes, collections).                              | `grouping`                 | `Remixes`                 | **Optional** (Audio)    | No                                   |
-| **Sampling Rate**      | The audio sampling rate (e.g., 44.1 kHz, 48 kHz).                               | `sampling_rate`            | `44.1kHz`                 | **Optional** (Audio)    | No                                   |
-| **Bit Depth**          | The bit depth for audio (e.g., 16-bit, 24-bit).                                  | `bit_depth`                | `16-bit`                  | **Optional** (Audio)    | No                                   |
-| **Video Codec**        | The codec used for encoding the video (e.g., H.264, HEVC).                       | `video_codec`              | `H.264`                   | **Automatically Determined** | Yes                                  |
-| **Audio Codec**        | The codec used for encoding the audio (e.g., AAC, MP3, ALAC).                    | `audio_codec`              | `AAC`                     | **Automatically Determined** | Yes                                  |
-| **File Format**        | The container type of the media file (e.g., MP4).                                | `format`                   | `MP4`                     | **Automatically Determined** | Yes                                  |
-| **Duration**           | The total length of the video/audio in seconds.                                   | `duration`                 | `3600` (1 hour)           | **Automatically Determined** | Yes                                  |
+| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** |
+|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
+| **Title**              | The name of the video.                                                           | `title`                    | `The Great Adventure`     | **Mandatory**           |
+| **Genre**              | The genre of the video content.                                                   | `genre`                    | `Comedy`                  | **Mandatory** (Video)   |
+| **Duration**           | The total length of the video in seconds.                                        | `duration`                 | `3600` (1 hour)           | **Mandatory**           |
+| **File Format**        | The container type of the media file (e.g., MP4).                                | `format`                   | `MP4`                     | **Mandatory**           |
+| **Video Codec**        | The codec used for encoding video (e.g., H.264 or HEVC).                         | `video_codec`              | `H.264`                   | **Mandatory** (Video)   |
+| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | **Mandatory** (Video)   |
+| **Artwork/Poster**     | The image representing the video (e.g., video thumbnail).                        | `artwork`                  | `cover.jpg`               | **Optional**            |
+| **Subtitle/Caption Tracks** | Text tracks for subtitles or closed captions.                                   | `subtitle`                 | `english.srt`             | **Optional**            |
+| **Release Date**       | The date the video was released.                                                | `release_date`             | `2023-05-15`              | **Optional**            |
+| **Season and Episode Numbers** | Used for TV shows to categorize by season and episode.                       | `season_number`, `episode_number` | `Season 1`, `Episode 5` | **Optional**            |
+| **Resolution**         | The resolution of the video (e.g., 1080p, 4K).                                   | `resolution`               | `1080p`                   | **Optional**            |
+| **Aspect Ratio**       | The aspect ratio of the video (e.g., 16:9, 4:3).                                 | `aspect_ratio`             | `16:9`                    | **Optional**            |
+| **Bitrate**            | The video bitrate used for encoding.                                            | `bitrate`                  | `2500k` (video)           | **Optional**            |
+| **Video Mode**         | The mode used for video (e.g., HDR, Standard).                                  | `video_mode`               | `HDR`                     | **Optional**            |
+
+### Apple Music Metadata Table (Audio)
+
+| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** |
+|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
+| **Title**              | The name of the audio track.                                                     | `title`                    | `The Great Adventure`     | **Mandatory**           |
+| **Artist**             | The performer or band for audio.                                                 | `artist`                   | `John Doe`                | **Mandatory** (Audio)   |
+| **Album**              | The album name for audio.                                                        | `album`                    | `Summer Hits`             | **Mandatory** (Audio)   |
+| **Genre**              | The genre of the audio content.                                                   | `genre`                    | `Comedy`                  | **Mandatory** (Audio)   |
+| **Duration**           | The total length of the audio in seconds.                                        | `duration`                 | `3600` (1 hour)           | **Mandatory**           |
+| **File Format**        | The container type of the media file (e.g., MP4, MP3, AAC).                     | `format`                   | `MP3`                     | **Mandatory** (Audio)   |
+| **Audio Codec**        | The codec used for encoding audio (e.g., AAC, MP3, ALAC).                        | `audio_codec`              | `AAC`                     | **Mandatory** (Audio)   |
+| **Artwork/Poster**     | The image representing the audio (e.g., album art).                             | `artwork`                  | `cover.jpg`               | **Mandatory** (Audio)   |
+| **Track Number**       | The track number in an album (for audio).                                        | `track_number`             | `5`                       | **Optional** (Audio)    |
+| **Album Artist**       | The artist or group for an album (for compilations).                             | `album_artist`             | `Various Artists`         | **Optional** (Audio)    |
+| **Composer**           | The composer of the music (for classical works).                                 | `composer`                 | `Beethoven`               | **Optional** (Audio)    |
+| **Year**               | The year the album or track was released.                                        | `year`                     | `2023`                    | **Optional** (Audio)    |
+| **Language**           | The language the audio content is in.                                            | `language`                 | `English`                 | **Optional** (Audio)    |
+| **Rating**             | User-assigned rating for the media (1–5 stars).                                  | `rating`                   | `5`                       | **Optional** (Audio)    |
+| **Copyright**          | Copyright information for the content.                                           | `copyright`                | `© 2023 John Doe Music`   | **Optional** (Audio)    |
+| **Grouping**           | Used to group tracks (e.g., remixes, collections).                              | `grouping`                 | `Remixes`                 | **Optional** (Audio)    |
+| **Sampling Rate**      | The audio sampling rate (e.g., 44.1 kHz, 48 kHz).                               | `sampling_rate`            | `44.1kHz`                 | **Optional** (Audio)    |
+| **Bit Depth**          | The bit depth for audio (e.g., 16-bit, 24-bit).                                  | `bit_depth`                | `16-bit`                  | **Optional** (Audio)    |
+
+### Automatically Determined Metadata (Read-Only)
+
+| **Field**              | **Description**                                                                 | **Technical Name**         | **Example Data**          | **Mandatory/Optional** |
+|------------------------|---------------------------------------------------------------------------------|----------------------------|---------------------------|------------------------|
+| **Video Codec**        | The codec used for encoding the video (e.g., H.264, HEVC).                       | `video_codec`              | `H.264`                   | **Automatically Determined** |
+| **Audio Codec**        | The codec used for encoding the audio (e.g., AAC, MP3, ALAC).                    | `audio_codec`              | `AAC`                     | **Automatically Determined** |
+| **File Format**        | The container type of the media file (e.g., MP4, MP3, AAC).                     | `format`                   | `MP4`                     | **Automatically Determined** |
+| **Duration**           | The total length of the video/audio in seconds.                                   | `duration`                 | `3600` (1 hour)           | **Automatically Determined** |
+
+---
 
 ### Common Encoders and Profiles Supported by Your Devices
 
@@ -60,7 +78,7 @@
 
 ### Conclusion
 
-This quick-reference sheet provides an overview of the **metadata** fields required for Apple TV and Music app compatibility, along with the **supported encoders** and **profiles** for each of your devices. You can refer to this sheet for easy encoding and transcoding decisions, ensuring the best compatibility and performance for your videos and audio content.
+This quick-reference sheet provides an overview of the **metadata** fields required for **Apple TV** and **Apple Music** (formerly iTunes) app compatibility, along with the **supported encoders** and **profiles** for each of your devices. You can refer to this sheet for easy encoding and transcoding decisions, ensuring the best compatibility and performance for your videos and audio content.
 
 ---
 
