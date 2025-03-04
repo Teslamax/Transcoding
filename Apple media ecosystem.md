@@ -69,6 +69,48 @@
 
 ---
 
+# Predefined Metadata Tags for Apple TV and Apple Music
+
+## Apple TV and Apple Music Metadata Tags
+
+### **Genre (Audio - Apple Music)**
+
+| **Accepted Values**                     |
+|-----------------------------------------|
+| Pop, Rock, Hip-Hop/Rap, Classical, Jazz, Electronic, Alternative, Country, Blues, R&B, Reggae, Folk, Indie, Soundtrack, Comedy, Children’s Music, Holiday, Latin, Christian & Gospel, New Age |
+
+### **Content Rating (Video - Apple TV)**
+
+| **Accepted Values**                      |
+|------------------------------------------|
+| G, PG, PG-13, R, NC-17, TV-Y, TV-G, TV-PG, TV-14, TV-MA |
+
+### **Media Kind (Audio - Apple Music)**
+
+| **Accepted Values**                  |
+|--------------------------------------|
+| Music, Audiobook, Podcast, Movie, TV Show, Home Video |
+
+### **TV Show Episode (Video - Apple TV)**
+
+| **Description**             |
+|-----------------------------|
+| **Season Number**: e.g., 1, 2, 3  |
+| **Episode Number**: e.g., 1, 2, 3  |
+
+### **Language (Video and Audio - Apple TV & Apple Music)**
+
+| **Accepted Values**           |
+|-------------------------------|
+| en (English), es (Spanish), fr (French), de (German), it (Italian), ja (Japanese), pt (Portuguese), zh (Chinese), ru (Russian), ko (Korean), ar (Arabic), hi (Hindi) |
+
+### **Movie Type (Video - Apple TV)**
+
+| **Accepted Values**        |
+|----------------------------|
+| Feature Film, Short Film, Documentary, Animated |
+
+
 ### Conclusion
 
 This quick-reference sheet provides an overview of the **metadata** fields required for **Apple TV** and **Apple Music** (formerly iTunes) app compatibility, along with the **supported encoders** and **profiles** for each of your devices. You can refer to this sheet for easy encoding and transcoding decisions, ensuring the best compatibility and performance for your videos and audio content.
