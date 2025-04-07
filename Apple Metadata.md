@@ -114,7 +114,3 @@
 ### Conclusion
 
 This quick-reference sheet provides an overview of the **metadata** fields required for **Apple TV** and **Apple Music** (formerly iTunes) app compatibility, along with the **supported encoders** and **profiles** for each of your devices. You can refer to this sheet for easy encoding and transcoding decisions, ensuring the best compatibility and performance for your videos and audio content.
-
-
-Once you're satisfied with the **Markdown version**, let me know, and I'll generate the **PDF version** for you!
-
